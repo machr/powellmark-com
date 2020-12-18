@@ -1,4 +1,4 @@
-function BlogPost1() {
+function BlogPost() {
   return (
     <div>
       <h1>This is a blog post</h1>
@@ -6,3 +6,5 @@ function BlogPost1() {
     </div>
   )
 }
+
+export default BlogPost
