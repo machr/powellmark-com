@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
 html,
 body {
   padding: 0;
@@ -5,6 +8,17 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  font-family: Bangers, Fira Sans, sans-serif;
+  background: yellowgreen;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+
 
 a {
   color: inherit;
