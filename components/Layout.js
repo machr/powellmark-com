@@ -1,12 +1,12 @@
 import Header from '../components/Header';
-
+import Container from './Container';
 
 const Layout = ({children}) => (
   <div>
     <Header />
-    <div>
+    <Container>
       { children }
-    </div>
+    </Container>
   </div>
 )
 

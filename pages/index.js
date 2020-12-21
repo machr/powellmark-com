@@ -11,7 +11,8 @@ function Home(){
       </Head>
 
       <Main>
-      This is the body
+      <h2>This is a section header</h2>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam labore nulla, reiciendis molestiae similique optio consectetur iste minus at ex animi asperiores iure modi nihil cumque totam, quisquam ipsum possimus.</p>
       </Main>
 
       <footer>
@@ -22,8 +23,12 @@ function Home(){
 }
 
 const Main = styled.main` 
-  padding: 3rem 5rem;
+  padding: 3rem 0;
   min-height: 70vh;
+
+  h2 {
+    font-family: 'Lobster';
+  }
 `;
 
 export default Home

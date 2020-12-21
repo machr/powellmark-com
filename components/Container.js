@@ -1,11 +1,17 @@
-
+import styled from 'styled-components';
 
 const Container = ({ children }) => {
   return (
-    <section>
+    <Wrapper>
       {children}
-    </section>
+    </Wrapper>
   )
 }
+
+const Wrapper = styled.section`
+  width: 90vw;
+  margin: 0 auto;
+`
+
 
 export default Container;
