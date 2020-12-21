@@ -1,14 +1,8 @@
 import Head from 'next/head';
 import Layout from '../components/Layout'
-import styles from '../styles/Home.module.css';
+import styled from 'styled-components';
 
-const bodyStyle = {
-  background: "SlateBlue",
-  padding: "3rem 5rem",
-  minHeight: "70vh"
-}
-
-export default function Home() {
+function Home(){
   return (
     <Layout>
       <Head>
@@ -16,14 +10,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main style={bodyStyle}>
+      <Main>
       This is the body
-      </main>
+      </Main>
 
-      <footer className={styles.footer}>
+      <footer>
       <h3>This is a footer</h3>
       </footer>
     </Layout>
-    
   )
 }
+
+const Main = styled.main` 
+  padding: 3rem 5rem;
+  min-height: 70vh;
+`;
+
+export default Home

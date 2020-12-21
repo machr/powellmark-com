@@ -1,16 +1,9 @@
 import Link from 'next/link'
-
-const navbarStyle = {
-  backgroundColour: "tomato",
-  color: "black",
-  display: "flex",
-  justifyContent: "space-between"
-
-}
+import styled from 'styled-components';
 
 const NavBar = () => {
   return (
-    <nav style={navbarStyle}>
+    <Nav>
       <h1><a href="logo">Mark</a></h1>  
       <ul>
         <li><Link href="/">Link</Link></li>
@@ -18,8 +11,13 @@ const NavBar = () => {
         <li><Link href="/alog">Link</Link></li>
         <li><Link href="/contact">Link</Link></li>
       </ul>
-    </nav> 
+    </Nav> 
   )
 }
+
+const Nav = styled.nav`
+  display: flex;
+  justify-content: space-between;
+`
 
 export default NavBar

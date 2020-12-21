@@ -1,4 +1,4 @@
-function AboutPage() {
+const AboutPage = () => {
   return <div><h1>About Me</h1></div>
 }
 
