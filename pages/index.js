@@ -1,25 +1,27 @@
-import Head from 'next/head';
 import Layout from '../components/Layout'
 import styled from 'styled-components';
 
-function Home(){
+const Index = ({title, description, ...props}) => {
   return (
-    <Layout>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <Layout pageTitle={`${title} | Frontend Developer`}>
+      <h1>Welcome to my page</h1>
+      <p>{description}</p>
       <Main>
-      <h2>This is a section header</h2>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam labore nulla, reiciendis molestiae similique optio consectetur iste minus at ex animi asperiores iure modi nihil cumque totam, quisquam ipsum possimus.</p>
+      <p>Posts go here</p>
       </Main>
-
-      <footer>
-      <h3>This is a footer</h3>
-      </footer>
     </Layout>
   )
+}
+
+export async function getStaticProps() {
+  const configData = await import('../siteconfig.json');
+
+  return {
+    props: {
+      title: configData.default.title,
+      description: configData.default.description
+    }
+  }
 }
 
 const Main = styled.main` 
@@ -31,4 +33,4 @@ const Main = styled.main`
   }
 `;
 
-export default Home
+export default Index

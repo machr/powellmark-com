@@ -4,12 +4,11 @@ import styled from 'styled-components';
 const NavBar = () => {
   return (
     <Nav>
-      <h1><a href="logo">Mark</a></h1>  
+      <a href="/">M</a>
       <NavLinks>
-        <li><Link href="/">Link</Link></li>
-        <li><Link href="/about">Link</Link></li>
-        <li><Link href="/alog">Link</Link></li>
-        <li><Link href="/contact">Link</Link></li>
+        <li><Link href="/about">About</Link></li>
+        <li><Link href="/blog">Blog</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
       </NavLinks>
     </Nav> 
   )
@@ -18,6 +17,7 @@ const NavBar = () => {
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 `
 
 const NavLinks = styled.ul`
