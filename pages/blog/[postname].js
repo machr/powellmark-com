@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 
 import Layout from '../../components/Layout';
 
@@ -14,7 +15,7 @@ const BlogPost = ({ siteTitle, frontmatter, markdownBody }) => {
       <article>
         <h1>{frontmatter.title}</h1>
         <p>by {frontmatter.author} in <strong>{frontmatter.tag}</strong></p>
-        <div><ReactMarkdown source={markdownBody} /></div>
+        <div><ReactMarkdown plugins={[gfm]} children={markdownBody} /></div>
       </article>
     </Layout> 
   )
