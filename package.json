@@ -31,5 +31,5 @@
   },
   "jest": {
     "verbose": true
-  },
+  }
 }
